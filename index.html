@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>CGPA Calculator</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="top">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div id="heading">
+
+                <h3>CGPA Calculator</h3>
+
+                <p>
+                    Calculate your GPA and CGPA easily
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- COURSE INPUT SECTION -->
+        <div class="course">
+
+            <!-- SECTION HEADING -->
+            <div class="headtwo">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <div class="Secheading">
+
+                    <h4>
+                        Current Semester Courses
+                    </h4>
+
+                    <p>
+                        Add your courses and grades for the current semester
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEMESTER INFORMATION -->
+            <div class="semesterInfo">
+
+                <!-- LEVEL -->
+                <div>
+
+                    <label for="level">
+                        Level
+                    </label><br>
+
+                    <select id="level">
+
+                        <option value="">
+                            Select level
+                        </option>
+
+                        <option value="Level 100">
+                            Level 100
+                        </option>
+
+                        <option value="Level 200">
+                            Level 200
+                        </option>
+
+                        <option value="Level 300">
+                            Level 300
+                        </option>
+
+                        <option value="Level 400">
+                            Level 400
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ACADEMIC YEAR -->
+                <div>
+
+                    <label for="academicYear">
+                        Academic Year
+                    </label><br>
+
+                    <select id="academicYear">
+
+                        <option value="">
+                            Select academic year
+                        </option>
+
+                        <option value="2023/2024">
+                            2023/2024
+                        </option>
+
+                        <option value="2024/2025">
+                            2024/2025
+                        </option>
+
+                        <option value="2025/2026">
+                            2025/2026
+                        </option>
+
+                        <option value="2026/2027">
+                            2026/2027
+                        </option>
+
+                        <option value="2027/2028">
+                            2027/2028
+                        </option>
+
+                        <option value="2028/2029">
+                            2028/2029
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SEMESTER -->
+                <div>
+
+                    <label for="semester">
+                        Semester
+                    </label><br>
+
+                    <select id="semester">
+
+                        <option value="">
+                            Select semester
+                        </option>
+
+                        <option value="Semester 1">
+                            Semester 1
+                        </option>
+
+                        <option value="Semester 2">
+                            Semester 2
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSE INPUTS -->
+            <div class="collect">
+
+                <!-- COURSE CODE -->
+                <div>
+
+                    <label for="CC">
+                        Course Code
+                    </label><br>
+
+                    <input type="text" id="CC" placeholder="e.g. CSC 401">
+
+                </div>
+
+
+                <!-- COURSE NAME -->
+                <div>
+
+                    <label for="CN">
+                        Course Name
+                    </label><br>
+
+                    <input type="text" id="CN" placeholder="e.g. Operating Systems">
+
+                </div>
+
+
+                <!-- CREDIT POINTS -->
+                <div>
+
+                    <label for="CH">
+                        Credit Points
+                    </label><br>
+
+                    <input type="number" id="CH" placeholder="e.g. 3" min="1" step="1">
+
+                </div>
+
+
+                <!-- GRADE -->
+                <div>
+
+                    <label for="grade">
+                        Grade
+                    </label><br>
+
+                    <select id="grade">
+
+                        <option value="">
+                            Select grade
+                        </option>
+
+                        <option value="A">
+                            A
+                        </option>
+
+                        <option value="B+">
+                            B+
+                        </option>
+
+                        <option value="B">
+                            B
+                        </option>
+
+                        <option value="C+">
+                            C+
+                        </option>
+
+                        <option value="C">
+                            C
+                        </option>
+
+                        <option value="D+">
+                            D+
+                        </option>
+
+                        <option value="D">
+                            D
+                        </option>
+
+                        <option value="E">
+                            E
+                        </option>
+
+                        <option value="IC">
+                            IC / Grade Pending
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD COURSE BUTTON -->
+            <div class="btn">
+
+                <button id="addcourse">
+                    + Add Course
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- COURSES TABLE -->
+        <div class="table">
+
+            <div class="ycourse">
+
+                <i class="fa-solid fa-book"></i>
+
+                <h4>
+                    Your Courses
+                </h4>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Course Code
+                        </th>
+
+                        <th>
+                            Course Name
+                        </th>
+
+                        <th>
+                            Credit Points
+                        </th>
+
+                        <th>
+                            Grade
+                        </th>
+
+                        <th>
+                            Grade Point
+                        </th>
+
+                        <th>
+                            CP × GP
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="courseTableBody">
+
+                    <!-- Courses will be added here using JavaScript -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- SEMESTER ACTIONS -->
+        <div class="semesterActions">
+
+            <button id="saveSemester">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Semester
+
+            </button>
+
+
+            <button id="newSemester">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Semester
+
+            </button>
+
+        </div>
+
+
+        <!-- SAVED SEMESTERS -->
+        <div class="savedBox">
+
+            <div class="savedHead">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <div>
+
+                    <h4>
+                        Saved Semesters
+                    </h4>
+
+                    <p>
+                        Your previous semester records
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="savedSemesters">
+
+                <!-- Saved semester records will appear here -->
+
+                <div class="emptySaved">
+
+                    No semesters saved yet.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTE -->
+        <div class="noteBox">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+                Your saved semester records are stored in your browser
+                and are used when calculating your CGPA.
+            </p>
+
+        </div>
+
+
+        <!-- CALCULATE BUTTONS -->
+        <div class="calculate">
+
+            <button class="btn1" id="calculateGPA">
+
+                Calculate GPA
+
+            </button>
+
+
+            <button class="btn2" id="calculateCGPA">
+
+                Calculate CGPA
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RESULT POPUP -->
+
+    <div class="popupOverlay" id="popupOverlay">
+
+        <div class="resultPopup">
+
+            <button class="closePopup" id="closePopup">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="resultIcon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+            <h3 id="resultTitle">
+                GPA Result
+            </h3>
+
+            <div class="resultValue" id="resultValue">
+                0.00
+            </div>
+
+            <p id="resultMessage">
+                Your semester GPA has been calculated.
+            </p>
+
+            <button class="popupButton" id="popupButton">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="action.js"></script>
+
+</body>
+
+</html>

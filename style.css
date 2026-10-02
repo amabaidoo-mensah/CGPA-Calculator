@@ -1,0 +1,930 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 0;
+
+    background: linear-gradient(
+        135deg,
+        #8397ac,
+        #a0b6d0,
+        #758da5
+    );
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 800px;
+    min-height: 90vh;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+/* TOP SECTION */
+
+.top {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.top i {
+    color: #244973;
+
+    font-size: 40px;
+
+    margin-right: 10px;
+}
+
+
+#heading h3 {
+    color: #244973;
+
+    margin-bottom: 3px;
+}
+
+
+#heading p {
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* COURSE SECTION */
+
+.course {
+    background: #EEF1F4;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    border-radius: 8px;
+
+    border: 1px solid #D5DAE0;
+
+    box-shadow:
+        0 10px 35px rgba(11, 31, 58, 0.12);
+}
+
+
+/* COURSE HEADER */
+
+.headtwo {
+    display: flex;
+    align-items: center;
+}
+
+
+.headtwo > i {
+    color: #3B5F82;
+
+    font-size: 25px;
+
+    margin-right: 10px;
+}
+
+
+.Secheading h4 {
+    color: #3B5F82;
+
+    margin-bottom: 3px;
+}
+
+
+.Secheading p {
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* SEMESTER INFORMATION */
+
+.semesterInfo {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 5px;
+}
+
+
+.semesterInfo > div {
+    flex: 1;
+}
+
+
+.semesterInfo label,
+.collect label {
+    font-size: 12px;
+
+    color: #334155;
+
+    font-weight: 600;
+}
+
+
+.semesterInfo select {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 7px 12px;
+
+    margin-top: 4px;
+
+    border: 1px solid #B8C0CA;
+
+    border-radius: 5px;
+
+    background: white;
+
+    outline: none;
+
+    color: #1E293B;
+
+    box-shadow:
+        0 5px 15px rgba(11, 31, 58, 0.08);
+}
+
+
+/*  COURSE INPUTS */
+
+.collect {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 5px;
+}
+
+
+.collect > div {
+    flex: 1;
+}
+
+
+.collect input,
+.collect select {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 6px 12px;
+
+    margin-top: 4px;
+
+    border: 1px solid #B8C0CA;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background: white;
+
+    color: #222e41;
+
+    box-shadow:
+        0 10px 35px rgba(11, 31, 58, 0.08);
+}
+
+
+.collect input::placeholder {
+    color: #94A3B8;
+}
+
+
+.collect input:focus,
+.collect select:focus,
+.semesterInfo select:focus {
+
+    border-color: #163A63;
+
+    box-shadow:
+        0 0 0 2px rgba(22, 58, 99, 0.12);
+}
+
+
+/* ADD COURSE BUTTON */
+
+.btn {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 5px;
+}
+
+
+.btn button {
+    width: 130px;
+
+    padding: 8px 12px;
+
+    background: #3B5F82;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.btn button:hover {
+    background: #163A63;
+}
+
+
+/* TABLE */
+
+.table {
+    margin-top: 15px;
+
+    background: #EEF1F4;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #D5DAE0;
+
+    box-shadow:
+        0 10px 35px rgba(11, 31, 58, 0.12);
+
+    overflow-x: auto;
+}
+
+
+/* TABLE HEADING */
+
+.ycourse {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.ycourse i {
+    color: #325071;
+
+    font-size: 18px;
+
+    margin-right: 8px;
+}
+
+
+.ycourse h4 {
+    color: #3B5F82;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+
+th {
+    background: #3B5F82;
+
+    color: white;
+
+    padding: 9px 6px;
+
+    font-size: 12px;
+}
+
+
+td {
+    padding: 9px 6px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #334155;
+
+    border-bottom: 1px solid #DDE2E7;
+}
+
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+tr:hover td {
+    background: #dce5ef;
+}
+
+
+/* REMOVE COURSE BUTTON */
+
+.remove-btn {
+    background: #C75C5C;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 5px 8px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+
+
+.remove-btn:hover {
+    background: #A94444;
+}
+
+
+/* SEMESTER ACTIONS */
+
+.semesterActions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.semesterActions button {
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+/*  SAVE SEMESTER */
+
+#saveSemester {
+    background: #3B5F82;
+
+    color: white;
+}
+
+
+#saveSemester:hover {
+    background: #163A63;
+}
+
+
+/* NEW SEMESTER */
+
+#newSemester {
+    background: #E1E5EA;
+
+    color: #334155;
+
+    border: 1px solid #C7CDD4;
+}
+
+
+#newSemester:hover {
+    background: #b6bbc2;
+}
+
+
+/* SAVED SEMESTERS */
+
+.savedBox {
+    margin-top: 15px;
+
+    background: #EEF1F4;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #D5DAE0;
+
+    box-shadow:
+        0 10px 35px rgba(11, 31, 58, 0.10);
+}
+
+
+.savedHead {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.savedHead > i {
+    color: #3B5F82;
+
+    font-size: 20px;
+
+    margin-right: 9px;
+}
+
+
+.savedHead h4 {
+    color: #3B5F82;
+
+    margin-bottom: 3px;
+}
+
+
+.savedHead p {
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/*  SAVED SEMESTER LIST */
+
+#savedSemesters {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/*  SAVED SEMESTER CARD */
+
+.savedSemester {
+    background: white;
+
+    padding: 10px 12px;
+
+    border-radius: 6px;
+
+    border-left: 4px solid #163A63;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 3px 10px rgba(11, 31, 58, 0.06);
+}
+
+
+/* SAVED SEMESTER INFORMATION */
+
+.savedSemesterInfo h5 {
+    color: #334155;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+
+.savedSemesterInfo p {
+    color: #64748B;
+
+    font-size: 11px;
+}
+
+
+/* SAVED GPA */
+
+.savedGpa {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.savedGpa strong {
+    color: #3B5F82;
+
+    font-size: 14px;
+}
+
+
+/* DELETE SEMESTER*/
+
+.deleteSemester {
+    background: transparent;
+
+    color: #C75C5C;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.deleteSemester:hover {
+    color: #A94444;
+}
+
+
+/* EMPTY STATE */
+
+.emptySaved {
+    text-align: center;
+
+    color: #7A8796;
+
+    font-size: 12px;
+
+    padding: 12px;
+}
+
+
+/* NOTE */
+
+.noteBox {
+    margin-top: 15px;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #F1F4F7;
+
+    border: 1px solid #DCE1E6;
+
+    border-radius: 6px;
+}
+
+
+.noteBox i {
+    color: #163A63;
+
+    font-size: 14px;
+}
+
+
+.noteBox p {
+    color: #64748B;
+
+    font-size: 11px;
+}
+
+
+/*  CALCULATE BUTTONS */
+
+.calculate {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.calculate button {
+    padding: 9px 15px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+/* GPA */
+
+.btn1 {
+    background: #163A63;
+
+    color: white;
+}
+
+
+.btn1:hover {
+    background: #0B1F3A;
+}
+
+
+/* CGPA */
+
+.btn2 {
+    background: #163A63;
+
+    color: white;
+}
+
+
+.btn2:hover {
+    background: #163A63;
+}
+
+
+/*  RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .container {
+        width: 95%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .semesterInfo {
+        flex-direction: column;
+    }
+
+
+    .collect {
+        flex-direction: column;
+    }
+
+
+    .semesterActions {
+        justify-content: stretch;
+    }
+
+
+    .semesterActions button {
+        flex: 1;
+
+        justify-content: center;
+    }
+
+
+    .calculate {
+        flex-direction: column;
+    }
+
+
+    .calculate button {
+        width: 100%;
+    }
+
+}
+
+
+/* RESULT POPUP */
+
+.popupOverlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(7, 26, 47, 0.70);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.popupOverlay.show {
+    display: flex;
+}
+
+
+/*  POPUP BOX */
+
+.resultPopup {
+    width: 350px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    border: 1px solid #D5DAE0;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+
+    animation: popupAppear 0.25s ease;
+}
+
+
+@keyframes popupAppear {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.90);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* CLOSE ICON */
+
+.closePopup {
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: #EEF1F4;
+
+    color: #163A63;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.closePopup:hover {
+    background: #0B1F3A;
+
+    color: white;
+}
+
+
+/* RESULT ICON */
+
+.resultIcon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 5px auto 12px;
+
+    border-radius: 50%;
+
+    background: #E1E5EA;
+
+    color: #163A63;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    border: 1px solid #C7CDD4;
+}
+
+
+/* RESULT TITLE */
+
+.resultPopup h3 {
+    color: #3B5F82;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+/* RESULT VALUE */
+
+.resultValue {
+    color: #3B5F82;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    margin: 5px 0;
+}
+
+
+/* RESULT MESSAGE */
+
+.resultPopup p {
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* POPUP BUTTON */
+
+.popupButton {
+    width: 100%;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #3B5F82;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.popupButton:hover {
+    background: #163A63;
+}
