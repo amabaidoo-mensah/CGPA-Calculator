@@ -4,7 +4,7 @@ A simple and user-friendly CGPA Calculator built with HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-[View the Live CGPA Calculator](https://ama-cgpa-calculator-2026.netlify.app/)
+[View the Live CGPA Calculator](https://cgpa-calculator26.netlify.app/)
 
 ## Features
 
@@ -18,9 +18,9 @@ A simple and user-friendly CGPA Calculator built with HTML, CSS, and JavaScript.
 * Calculate overall CGPA from saved semesters
 * Support for incomplete (IC) courses
 * Store saved semester records using browser `localStorage`
-* Responsive and clean user interface
+* Clean and simple user interface
 
-## Technologies Used
+##  Technologies Used
 
 * HTML5
 * CSS3
@@ -28,7 +28,7 @@ A simple and user-friendly CGPA Calculator built with HTML, CSS, and JavaScript.
 * Font Awesome
 * Browser `localStorage`
 
-## How It Works
+##  How It Works
 
 The calculator uses the credit points and grade points of each course to calculate the semester GPA.
 
@@ -42,11 +42,11 @@ The CGPA is calculated using the combined quality points and credit points from 
 
 Saved semester records are stored in the browser using `localStorage`.
 
-This means the saved records remain available on the same browser and device unless the browser's site data is cleared.
+This means saved records remain available on the same browser and device unless the browser's site data is cleared.
 
 The current version does not use a database or user account, so saved records do not automatically sync across different devices or browsers.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 CGPA-Calculator/
@@ -57,10 +57,9 @@ CGPA-Calculator/
 └── README.md
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Add student profile information
-* Add academic year and semester history management
 * Add downloadable academic records
 * Add PDF export
 * Add user accounts
@@ -73,7 +72,3 @@ CGPA-Calculator/
 **Ama Baidoo-Mensah**
 
 Computer Science Student | Front-End Developer
-
----
-
-If you find this project useful, feel free to explore the code and try the live calculator.
