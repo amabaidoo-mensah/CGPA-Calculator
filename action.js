@@ -1,8 +1,6 @@
-
 // COLLECTING USER INPUT
 
 const level = document.getElementById("level");
-const academicYear = document.getElementById("academicYear");
 const semester = document.getElementById("semester");
 
 const courseCode = document.getElementById("CC");
@@ -29,7 +27,6 @@ const calculateCGPA =
 
 // RESULT POPUP
 
-
 const popupOverlay =
     document.getElementById("popupOverlay");
 
@@ -52,7 +49,6 @@ const resultMessage =
 
 // SHOW RESULT POPUP
 
-
 function showResult(title, value, message) {
 
     resultTitle.textContent = title;
@@ -68,7 +64,6 @@ function showResult(title, value, message) {
 
 
 // CLOSE RESULT POPUP
-
 
 function closeResult() {
 
@@ -107,6 +102,7 @@ popupOverlay.addEventListener(
 
     }
 );
+
 
 
 // GRADE POINT FUNCTION
@@ -168,6 +164,7 @@ function getGradePoint(userGrade) {
     }
 
 }
+
 
 
 // ADD COURSE
@@ -254,9 +251,8 @@ addCourse.addEventListener(
         }
 
 
-      
+
         // CREATE TABLE ROW
-       
 
         const newRow =
             document.createElement("tr");
@@ -341,9 +337,8 @@ addCourse.addEventListener(
         }
 
 
-   
+
         // ADD CELLS TO ROW
-      
 
         newRow.appendChild(
             codeCell
@@ -374,8 +369,8 @@ addCourse.addEventListener(
         );
 
 
+
         // REMOVE BUTTON
-       
 
         const removeButton =
             document.createElement("button");
@@ -403,18 +398,16 @@ addCourse.addEventListener(
         );
 
 
-      
+
         // ADD ROW TO TABLE
-    
 
         tableBody.appendChild(
             newRow
         );
 
 
-  
+
         // CLEAR INPUTS
-      
 
         courseCode.value = "";
 
@@ -480,7 +473,6 @@ function getCurrentCourses() {
 
 
 // CALCULATE SEMESTER TOTALS
-
 
 function calculateSemesterTotals(courses) {
 
@@ -666,12 +658,11 @@ saveSemester.addEventListener(
 
         if (
             level.value === "" ||
-            academicYear.value === "" ||
             semester.value === ""
         ) {
 
             alert(
-                "Select your level, academic year and semester."
+                "Select your level and semester."
             );
 
             return;
@@ -718,7 +709,6 @@ saveSemester.addEventListener(
             semesters.findIndex(
                 (item) =>
                     item.level === level.value &&
-                    item.academicYear === academicYear.value &&
                     item.semester === semester.value
             );
 
@@ -732,9 +722,6 @@ saveSemester.addEventListener(
 
             level:
                 level.value,
-
-            academicYear:
-                academicYear.value,
 
             semester:
                 semester.value,
@@ -806,7 +793,7 @@ saveSemester.addEventListener(
         // CONFIRMATION
 
         alert(
-            `${level.value} - ${academicYear.value} - ${semester.value} has been saved.`
+            `${level.value} - ${semester.value} has been saved.`
         );
 
     }
@@ -874,7 +861,7 @@ function displaySavedSemesters() {
                 document.createElement("h5");
 
             heading.textContent =
-                `${record.level} • ${record.academicYear} • ${record.semester}`;
+                `${record.level} • ${record.semester}`;
 
 
             // DETAILS
@@ -897,7 +884,7 @@ function displaySavedSemesters() {
 
 
             // GPA SECTION
-            
+
             const savedGpa =
                 document.createElement("div");
 
@@ -964,7 +951,6 @@ function displaySavedSemesters() {
 
 
             // ADD EVERYTHING TO CARD
-   
 
             semesterCard.appendChild(
                 semesterInfo
@@ -987,7 +973,6 @@ function displaySavedSemesters() {
 
 
 // DELETE SAVED SEMESTER
-
 
 function deleteSavedSemester(id) {
 
@@ -1015,14 +1000,11 @@ function deleteSavedSemester(id) {
 
 // NEW SEMESTER
 
-
 newSemester.addEventListener(
     "click",
     () => {
 
         level.value = "";
-
-        academicYear.value = "";
 
         semester.value = "";
 
@@ -1048,8 +1030,8 @@ newSemester.addEventListener(
 );
 
 
-// CALCULATE CGPA
 
+// CALCULATE CGPA
 
 calculateCGPA.addEventListener(
     "click",
@@ -1152,6 +1134,5 @@ calculateCGPA.addEventListener(
 
 
 // LOAD SAVED SEMESTERS WHEN PAGE OPENS
-
 
 displaySavedSemesters();
