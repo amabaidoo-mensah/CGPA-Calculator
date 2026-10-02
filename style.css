@@ -177,7 +177,7 @@ body {
 }
 
 
-/*  COURSE INPUTS */
+/* COURSE INPUTS */
 
 .collect {
     display: flex;
@@ -417,7 +417,7 @@ tr:hover td {
 }
 
 
-/*  SAVE SEMESTER */
+/* SAVE SEMESTER */
 
 #saveSemester {
     background: #3B5F82;
@@ -497,7 +497,7 @@ tr:hover td {
 }
 
 
-/*  SAVED SEMESTER LIST */
+/* SAVED SEMESTER LIST */
 
 #savedSemesters {
     display: flex;
@@ -508,7 +508,7 @@ tr:hover td {
 }
 
 
-/*  SAVED SEMESTER CARD */
+/* SAVED SEMESTER CARD */
 
 .savedSemester {
     background: white;
@@ -566,7 +566,7 @@ tr:hover td {
 }
 
 
-/* DELETE SEMESTER*/
+/* DELETE SEMESTER */
 
 .deleteSemester {
     background: transparent;
@@ -634,7 +634,7 @@ tr:hover td {
 }
 
 
-/*  CALCULATE BUTTONS */
+/* CALCULATE BUTTONS */
 
 .calculate {
     display: flex;
@@ -688,7 +688,7 @@ tr:hover td {
 }
 
 
-/*  RESPONSIVE */
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
 
@@ -700,6 +700,26 @@ tr:hover td {
 
 
 @media (max-width: 650px) {
+
+    body {
+        min-height: auto;
+
+        height: auto;
+
+        align-items: flex-start;
+
+        padding: 15px 8px;
+    }
+
+
+    .container {
+        width: 100%;
+
+        min-height: auto;
+
+        height: auto;
+    }
+
 
     .semesterInfo {
         flex-direction: column;
@@ -761,7 +781,7 @@ tr:hover td {
 }
 
 
-/*  POPUP BOX */
+/* POPUP BOX */
 
 .resultPopup {
     width: 350px;
